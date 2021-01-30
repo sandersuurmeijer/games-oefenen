@@ -23,7 +23,6 @@ function draw() {
   fill('khaki');
   ellipse (350,100,150);
 
-  // teken de boom
   fill('sienna');
   rect(300,275,40,150);
   fill('olive');
