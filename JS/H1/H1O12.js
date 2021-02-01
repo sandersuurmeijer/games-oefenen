@@ -1,5 +1,7 @@
 var xJOS = 350;
 var yJOS = 350;
+var bewegingx = 1;
+var bewegingy = 1;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -35,5 +37,22 @@ function draw() {
   arc(0, 40, 80, 40, 0, PI, CHORD);
   pop();
   // einde tekenen JOS
+
+  if(xJOS <= 0){
+  bewegingy = random(0,10)
+  }
+
+    if(yJOS <= 0){
+  bewegingx = random(0,10);
+  }
+
+  if(xJOS <= 0 || xJOS >= 450){
+    bewegingx = bewegingx*-1;
+  }
+  xJOS -= bewegingx;
   
+  if(yJOS <= 0 || yJOS >= 450){
+    bewegingy = bewegingy*-1;
+  }
+  yJOS -= bewegingy;
 }

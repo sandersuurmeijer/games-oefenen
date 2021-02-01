@@ -1,4 +1,5 @@
 var voornaam = "sander"
+var zin;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -13,7 +14,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  naam = "sander"
+
   push();
   translate(225,225);
   rect(0,0,200,200);
@@ -23,11 +24,16 @@ function draw() {
   rect(0,0,200,200);
   pop();
 
-  fill(255,225,0)
-  rect(225,225,50,50)
+  fill(255,225,0);
+  rect(225,225,50,50);
   
-  fill('black')
-  text(plakstring(voornaam, "Daniël") + "hallo ik ben een coronawappie " + plakstring(voornaam, "suurmeijer"),00,400)
+  fill('black');
+  zin = voornaam + " daniël hallo ik ben een coronawappie " + plakstring(voornaam, " suurmeijer");
+  text(zin,0,400);
+  translate(0,-200);
+  text(zin,0,400);
+
+  
 }
 
 
