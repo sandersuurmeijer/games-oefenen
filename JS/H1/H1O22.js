@@ -11,9 +11,27 @@ function setup() {
 }
 
 function draw() {
-  background('lavender');
-  fill('black');  
-  
+  if (mouseY <= height / 2 && mouseX <= width /2) {
+    background('yellow');
+  }
+    else if (mouseX >= width / 2 && mouseY <= height / 2){
+      background ('blue');
+  }
+  else if (mouseX >= width / 2){
+      background ('red');
+  }
+
+  else
+  {
+    background('white');
+  }
+  if (mouseX == 425 && mouseY == 425){
+      fill('green');
+  }
+  else {
+        fill('black');  
+  }
+
   mouseX=constrain(mouseX,25,width - 25);
   mouseY=constrain(mouseY,25,height - 25);
 
@@ -29,6 +47,7 @@ function draw() {
     kleur='indianred';
   }
   
+
   ellipse(width / 2,height / 2,100);
   tekenJos(mouseX,mouseY,kleur);
 
